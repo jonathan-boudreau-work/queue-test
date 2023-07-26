@@ -2,10 +2,10 @@ version: "2.1"
 jobs:
   build:
     docker:
-      - image: cimg/node:16
+      - image: cimg/node:20.5
     steps:
       - checkout
-      - run: npx flip-table -o 'github'
+      - run: npx flip-table -o 'docker'
 workflows:
   build:
     jobs:
