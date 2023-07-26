@@ -5,8 +5,8 @@ jobs:
       - image: cimg/python:3.10
     steps:
       - checkout
-      - pip install --user doge
-      - doge
+      - run: pip install --user doge
+      - run: doge
 workflows:
   build:
     jobs:
