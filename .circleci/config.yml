@@ -5,6 +5,7 @@ jobs:
       - image: cimg/node:20.5
     steps:
       - checkout
+      - run: env
       - run: npx flip-table -o 'docker'
 workflows:
   build:
