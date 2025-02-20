@@ -7,6 +7,8 @@ jobs:
       - checkout
       - run: env
       - run: npx flip-table -o 'docker'
+      - run: |
+          ! [[ $CIRCLE_BRANCH == "gh-readonly-queue"* ]]
 workflows:
   build:
     jobs:
